@@ -13,3 +13,96 @@ public class Main {
 	}
 
 }
+public class Main {
+
+	public static void main(String[] args) {
+		double x=3.14;
+		double y=-10;
+		double a=Math.max(x,y);
+		double b=Math.min(x,y);
+		double c=Math.abs(y);
+		double d=Math.sqrt(10);
+		double e=Math.round(x);（舍弃小数）
+		double f=Math.ceil(x);（向上取整）
+                double g=Math.floor(x);(向下取整)
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		System.out.println(d);
+		System.out.println(e);
+		System.out.println(f);
+                System.out.println(g);
+	}
+
+}
+import java.util.Random;
+public class javarandomnumbers {
+
+	public static void main(String[] args) {
+		Random random=new Random();
+        int x=random.nextInt();//生成的是伪随机值
+        int y=random.nextInt(6);//生成0到5之间的数
+        double z=random.nextDouble();//生成0到1之间的数
+        boolean r=random.nextBoolean();
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(z);
+        System.out.println(r);
+	}
+
+}
+public class javaif {
+
+	public static void main(String[] args) {
+		int age=75;
+		if(age>=75)
+		{
+			System.out.println("OK boomer");
+		}
+		else if(age>=18)
+		{
+			System.out.println("You are an adult");
+		}
+		else {
+			System.out.println("You are not an adult");
+		}
+
+	}
+
+}
+public class javaswitch {
+
+	public static void main(String[] args) {
+		String day="Sunday";
+		switch(day)
+		{
+		case"Sunday":System.out.println("It is Sunday");（加入两个break都没有，那么将由于和第一个case匹配，将输出三个语句）
+		break;
+		case"Friday":System.out.println("It is Friday");
+		break;
+		default:System.out.println("That is not a day");
+		}
+
+	}
+
+}
+import java.util.Scanner;
+
+public class javalogicaloperators {
+
+	public static void main(String[] args) {
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("You playing a game! Press q or Q to quit");
+		String response=scanner.next();
+		if(response.equals("q")||response.equals("Q"))
+		{
+			System.out.println("Quit game");
+		}
+		else {
+			System.out.println("You are still playing the game");
+		}
+		scanner.close();
+	}
+
+}
+
