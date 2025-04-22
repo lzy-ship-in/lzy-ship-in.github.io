@@ -105,4 +105,185 @@ public class javalogicaloperators {
 	}
 
 }
+public class array2D {
 
+	public static void main(String[] args) {
+		int [][] arr= {{1,2,3},{4,5,6}};
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.println();
+			for(int j=0;j<arr[i].length;j++)
+			{
+				System.out.print(arr[i][j]);
+			}
+		}
+
+	}
+
+}
+public class stringmethods {
+
+	public static void main(String[] args) {
+		String name="bro";
+		//boolean result=name.equalsIgnoreCase("bro");
+		//char result=name.charAt(0);
+		//int result=name.indexOf("b");
+		//boolean result=name.isEmpty();
+		//String result=name.toUpperCase();
+		//String result=name.toLowerCase();
+		//String result=name.trim();
+		String result=name.replace('o', 's');
+		System.out.println(result);
+
+	}
+
+}
+public class wrappeclasses {
+
+	public static void main(String[] args) {
+		//wrapper classes = provides a way to use primitive data types as reference data（引用数据类型） types
+		//                  reference data types contain useful methods
+		//                  can be used with collections(ex.Arraylist)
+		//primitive       //wrapper
+		//boolean         Boolean
+		//char            Character
+		//int             Integer
+		//double          Double
+		//                String
+		Boolean a=true;
+	    Boolean b=false;
+	    int  res=a.compareTo(b);
+	    Integer c=123;
+	    Double d=3.14;
+	    Character e='@';
+	    System.out.println(res);
+	}
+
+}
+import java.util.ArrayList;
+
+public class Arraylist {
+
+	public static void main(String[] args) {
+		ArrayList<String>food=new ArrayList<String>();
+        food.add("pizza");
+        food.add("hamberger");
+        food.add("hot dog");
+        food.set(0, "rice");
+        food.remove(0);
+        food.clear();
+        for(int i=0;i<food.size();i++)
+        {
+        	System.out.println(food.get(i));
+        }
+	}
+
+}
+import java.util.ArrayList;
+
+public class java2DArraylist {
+
+	public static void main(String[] args) {
+		//2D ArrayList = a dynamic list of lists
+		//You can change the size of these lists during runtime
+		ArrayList<ArrayList<String>>groceryList=new ArrayList();
+		ArrayList<String>bakeryList=new ArrayList();
+		bakeryList.add("pasta");
+		bakeryList.add("garlic bread");
+		bakeryList.add("donuts");
+		ArrayList<String>produceList=new ArrayList();
+		produceList.add("1");
+		produceList.add("2");
+		produceList.add("3");
+		ArrayList<String>drinkList=new ArrayList();
+		drinkList.add("milk");
+		drinkList.add("oranage");
+		drinkList.add("juice");
+		groceryList.add(bakeryList);
+		groceryList.add(produceList);
+		groceryList.add(drinkList);
+        //System.out.println(groceryList);
+		System.out.println(groceryList.get(0).get(0));
+	}
+
+}
+import java.util.ArrayList;
+
+public class foreachloop {
+
+	public static void main(String[] args) {
+		//遍历for循环
+        //String[] animals= {"cats","dogs","pandas"};
+		ArrayList<String>animals=new ArrayList<String>();
+		animals.add("dogs");
+		animals.add("cats");
+		animals.add("pandas");
+        for(String i:animals)
+        {
+        	System.out.println(i);
+        }
+	}
+}
+public class javamethods {
+
+	public static void main(String[] args) {
+		//methods = a block of code that is executed whenever it is called upon
+		String name="bro";
+		int age=18;
+		hello(name,age);
+		int x=3;
+		int y=4;
+		int z=add(x,y);
+		System.out.println(z);
+
+	}
+	//这里必须加上static,因为无法在一个静态方法内部调用一个非静态方法
+	 static void hello(String name,int age) {
+		System.out.println("Hello "+name+",you are "+age+" years old!");
+	}
+	static int add(int x,int y)
+	{
+		
+		return x+y;
+		
+	}
+
+}
+public class overloadedmethods {
+
+	public static void main(String[] args) {
+		//overloaded methods = methods  that shares the same name but have different parameters（参数）
+		//                     methods name+ parameters = method signature
+       
+		System.out.println(add(1,2));
+		System.out.println(add(1,2,3));
+		System.out.println(add(1,2,3,4));
+		System.out.println(add(1.0,2,3,4));
+	}
+      
+	
+	static int add(int a,int b)
+	{
+		return a+b;
+	}
+	static int add(int a,int b,int c)
+	{
+		return a+b+c;
+	}
+	static int add(int a,int b,int c,int d)
+	{
+		return a+b+c+d;
+	}
+	static double add(double a,double b)
+	{
+		return a+b;
+	}
+	static double add(double a,double b,double c)
+	{
+		return a+b+c;
+	}
+	static double add(double a,double b,double c,double d)
+	{
+		return a+b+c+d;
+	}
+}
