@@ -287,3 +287,30 @@ public class overloadedmethods {
 		return a+b+c+d;
 	}
 }
+public class javafinalkeywords {
+
+	public static void main(String[] args) {
+		final double PI=3.14159;
+		//pi=4;（final声明的变量不能再进行改变）
+		System.out.println(PI);
+
+	}
+
+}
+public class javaprint {
+
+	public static void main(String[] args) {
+		//System.out.printf("%d This is a format string",123);
+		boolean myBoolean=true;
+		char mychar='@';
+		String myString="Bro";
+		int myInt=50;
+		double myDouble=1000.123456789;
+		//System.out.printf("%d",myInt);
+		//System.out.printf("%b",myBoolean);
+		//System.out.printf("%-20f", myDouble);//“-”代表左对齐，20代表宽度，“+”可显示正负号，直接%f最多能输出小数点后6位
+		//System.out.printf("%020f", myDouble);//用“0”填充
+		System.out.printf("%,f", myDouble);//用“，”分隔千位
+	}
+
+};
