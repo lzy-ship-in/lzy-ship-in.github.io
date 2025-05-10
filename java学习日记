@@ -1,1 +1,22 @@
 
+java中的方法类似于C语言中的函数
+
+在java的main函数前加上static的原因：
+Java 虚拟机（JVM）在启动时需要一种无需创建类实例就能调用该方法的方式。
+JVM 启动时会首先加载指定的类（例如 java MyClass 中的 MyClass），然后直接调用该类的 main 方法。
+如果 main 方法不是 static，则需要先创建类的实例（例如 new MyClass().main(args)），但 JVM 不会自动创建实例，因此无法启动程序。
+static 方法属于类本身，而不是类的实例。因此，无需创建对象即可直接通过类名调用（例如 MyClass.main(args)）。
+静态方法不能直接访问非静态成员（如实例变量或方法），因为它们不依赖于任何对象实例。
+
+public class MyClass {
+    static int staticVar = 10;  // 静态变量
+    int instanceVar = 20;       // 实例变量
+
+    public static void main(String[] args) {
+        System.out.println(staticVar);  // 合法：直接访问静态变量
+        // System.out.println(instanceVar);  // 非法：无法直接访问实例变量
+
+        MyClass obj = new MyClass();
+        System.out.println(obj.instanceVar);  // 合法：通过实例访问
+    }
+}
